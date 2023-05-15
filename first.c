@@ -39,3 +39,17 @@ repeat:
  i=temp;
  }
 }
+
+
+
+//second question code
+1. Divide the following C++ program:
+floatlimitedSquare(x){float x;
+  /* returns x-squared, nut never more than 100 */
+return (x <= -10.0 || x >= 10.0) ? 100 : x*x;
+}
+into appropriate lexemes, using the discussion of Section 3.1.2 as a guide. Which lexemes should get associated lexical values? What should those values be?Answer
+<float><id, limitedSquaare><(><id, x><)><{>
+<float><id, x>
+<return><(><id, x><op,"<="><num, -10.0><op, "||"><id, x><op, ">="><num, 10.0><)><op, "?"><num, 100><op, ":"><id, x><op, "*"><id, x>
+<}>
